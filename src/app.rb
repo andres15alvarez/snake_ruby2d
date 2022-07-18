@@ -1,15 +1,16 @@
-require_relative 'views/ruby2d'
+require_relative 'views/game'
 require_relative 'models/state'
 require_relative 'utils/initial_state'
 require_relative 'actions/actions'
 
+# Entry point of the game
 class App
   def initialize
     @state = initial_state
   end
 
   def start
-    @view = Ruby2dView.new(self)
+    @view = GameView.new(self)
     Thread.new { init_timer(@view) }
     @view.start(@state)
     @view.render_game(@state)
