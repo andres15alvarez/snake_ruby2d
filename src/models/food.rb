@@ -1,4 +1,4 @@
-require_relative "coordinate"
+require_relative 'coordinate'
 
 class Food < Coordinate
 end

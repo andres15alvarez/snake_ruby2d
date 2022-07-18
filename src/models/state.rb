@@ -1,5 +1,6 @@
 class State
   attr_accessor :snake, :food, :grid, :next_direction, :is_game_finished
+
   def initialize(snake, food, grid, next_direction)
     @snake = snake
     @food = food
