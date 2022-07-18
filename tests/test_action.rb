@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require_relative 'test_helper'
 require_relative '../src/utils/initial_state'
 require_relative '../src/models/state'
 require_relative '../src/models/coordinate'
