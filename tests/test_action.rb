@@ -1,12 +1,12 @@
-require "minitest/autorun"
-require_relative "../src/utils/initial_state"
-require_relative "../src/models/state"
-require_relative "../src/models/coordinate"
-require_relative "../src/models/snake"
-require_relative "../src/models/food"
-require_relative "../src/models/grid"
-require_relative "../src/utils/direction"
-require_relative "../src/actions/actions"
+require 'minitest/autorun'
+require_relative '../src/utils/initial_state'
+require_relative '../src/models/state'
+require_relative '../src/models/coordinate'
+require_relative '../src/models/snake'
+require_relative '../src/models/food'
+require_relative '../src/models/grid'
+require_relative '../src/utils/direction'
+require_relative '../src/actions/actions'
 
 class ActionTest < Minitest::Test
   def setup

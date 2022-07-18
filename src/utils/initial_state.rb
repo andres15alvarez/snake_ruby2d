@@ -1,9 +1,9 @@
-require_relative "../models/state"
-require_relative "../models/coordinate"
-require_relative "../models/snake"
-require_relative "../models/food"
-require_relative "../models/grid"
-require_relative "direction"
+require_relative '../models/state'
+require_relative '../models/coordinate'
+require_relative '../models/snake'
+require_relative '../models/food'
+require_relative '../models/grid'
+require_relative 'direction'
 
 def initial_state
   State.new(

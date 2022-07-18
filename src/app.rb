@@ -1,11 +1,11 @@
-require_relative "views/ruby2d"
-require_relative "models/state"
-require_relative "utils/initial_state"
-require_relative "actions/actions"
+require_relative 'views/ruby2d'
+require_relative 'models/state'
+require_relative 'utils/initial_state'
+require_relative 'actions/actions'
 
 class App
   def initialize
-    @state = initial_state()
+    @state = initial_state
   end
 
   def start
@@ -35,5 +35,5 @@ class App
   end
 end
 
-app = App.new()
-app.start()
+app = App.new
+app.start

@@ -1,14 +1,14 @@
-require_relative "direction"
+require_relative 'direction'
 
 def handle_input(key)
   case key
-  when "up"
+  when 'up'
     Direction::UP
-  when "down"
+  when 'down'
     Direction::DOWN
-  when "left"
+  when 'left'
     Direction::LEFT
-  when "right"
+  when 'right'
     Direction::RIGHT
   end
 end

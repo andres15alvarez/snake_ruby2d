@@ -1,6 +1,6 @@
-require "ruby2d"
-require_relative "../actions/actions"
-require_relative "../utils/handle_input"
+require 'ruby2d'
+require_relative '../actions/actions'
+require_relative '../utils/handle_input'
 
 class Ruby2dView
 
@@ -12,7 +12,7 @@ class Ruby2dView
   def start(state)
     extend Ruby2D::DSL
     set(
-      title: "Snake",
+      title: 'Snake',
       width: @pixel_size * state.grid.cols,
       height: @pixel_size * state.grid.rows
     )
@@ -32,7 +32,7 @@ class Ruby2dView
   private
 
   def render_food(state)
-    @food.remove() if @food
+    @food.remove if @food
     extend Ruby2D::DSL
     @food = Square.new(
       x: state.food.col * @pixel_size,
@@ -45,7 +45,7 @@ class Ruby2dView
   def render_snake(state)
     if @snake_positions
       @snake_positions.each do |pos|
-        pos.remove()
+        pos.remove
       end
     end
     extend Ruby2D::DSL

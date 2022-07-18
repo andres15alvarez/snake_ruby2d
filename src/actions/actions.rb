@@ -1,9 +1,9 @@
-require_relative "../utils/direction"
-require_relative "../models/coordinate"
-require_relative "../models/food"
+require_relative '../utils/direction'
+require_relative '../models/coordinate'
+require_relative '../models/food'
 
+# @param state [State]
 def move_snake(state)
-  next_direction = state.next_direction
   next_position = calculate_next_position(state)
   if is_position_food?(state, next_position)
     state = grow_snake_to(state, next_position)
@@ -19,13 +19,13 @@ def calculate_next_position(state)
   new_position = state.snake.positions.first
   case state.next_direction
   when Direction::UP
-    return Coordinate.new(new_position.row - 1, new_position.col)
+    Coordinate.new(new_position.row - 1, new_position.col)
   when Direction::RIGHT
-    return Coordinate.new(new_position.row, new_position.col + 1)
+    Coordinate.new(new_position.row, new_position.col + 1)
   when Direction::DOWN
-    return Coordinate.new(new_position.row + 1, new_position.col)
+    Coordinate.new(new_position.row + 1, new_position.col)
   when Direction::LEFT
-    return Coordinate.new(new_position.row, new_position.col - 1)
+    Coordinate.new(new_position.row, new_position.col - 1)
   end
 end
 
@@ -35,7 +35,7 @@ def is_position_valid?(state, position)
     (position.col < state.grid.cols and position.col >= 0)
   )
   is_snake_position = state.snake.positions.include?(position)
-  is_inside_grid and not is_snake_position
+  is_inside_grid and !is_snake_position
 end
 
 def move_snake_to_position(state, position)
