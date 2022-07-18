@@ -8,3 +8,5 @@ gem "minitest", "~> 5.8"
 gem "byebug", "~> 11.1", :group => :development
 
 gem "rake", "~> 13.0", :group => :development
+
+gem "solargraph", "~> 0.45.0", :group => :development
