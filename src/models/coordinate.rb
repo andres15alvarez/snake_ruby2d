@@ -4,4 +4,8 @@ class Coordinate
     @row = row
     @col = col
   end
+
+  def ==(other)
+    @row == other.row and @col == other.col
+  end
 end

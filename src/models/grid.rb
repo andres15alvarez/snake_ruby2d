@@ -4,4 +4,8 @@ class Grid
     @rows = rows
     @cols = cols
   end
+
+  def ==(other)
+    @rows == other.rows and @cols == other.cols
+  end
 end

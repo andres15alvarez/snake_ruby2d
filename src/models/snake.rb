@@ -3,4 +3,8 @@ class Snake
   def initialize(positions)
     @positions = positions
   end
+
+  def ==(other)
+    @positions == other.positions
+  end
 end
