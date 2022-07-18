@@ -2,13 +2,15 @@ require 'ruby2d'
 require_relative '../actions/actions'
 require_relative '../utils/handle_input'
 
-class Ruby2dView
-
+# Main view of the game
+class GameView
+  # @param app [App]
   def initialize(app)
     @pixel_size = 50
     @app = app
   end
 
+  # @param state [State]
   def start(state)
     extend Ruby2D::DSL
     set(
@@ -22,6 +24,7 @@ class Ruby2dView
     show
   end
 
+  # @param state [State]
   def render_game(state)
     extend Ruby2D::DSL
     close if state.is_game_finished
@@ -31,8 +34,9 @@ class Ruby2dView
 
   private
 
+  # @param state [State]
   def render_food(state)
-    @food.remove if @food
+    @food&.remove
     extend Ruby2D::DSL
     @food = Square.new(
       x: state.food.col * @pixel_size,
@@ -42,12 +46,9 @@ class Ruby2dView
     )
   end
 
+  # @param state [State]
   def render_snake(state)
-    if @snake_positions
-      @snake_positions.each do |pos|
-        pos.remove
-      end
-    end
+    @snake_positions&.each(&:remove)
     extend Ruby2D::DSL
     @snake_positions = state.snake.positions.map do |pos|
       Square.new(
