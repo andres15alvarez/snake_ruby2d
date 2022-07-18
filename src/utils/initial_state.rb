@@ -5,6 +5,8 @@ require_relative '../models/food'
 require_relative '../models/grid'
 require_relative 'direction'
 
+# Get an initial state
+# @return [State] initial state for the game
 def initial_state
   State.new(
     Snake.new([Coordinate.new(1, 1), Coordinate.new(0, 1)]),
