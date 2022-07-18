@@ -10,3 +10,5 @@ gem "byebug", "~> 11.1", :group => :development
 gem "rake", "~> 13.0", :group => :development
 
 gem "solargraph", "~> 0.45.0", :group => :development
+
+gem "simplecov", "~> 0.21.2", :group => :test
